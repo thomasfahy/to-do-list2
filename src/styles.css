@@ -9,6 +9,9 @@
     height: 100vh;
 }
 
+
+ /* Project Section */
+
 #project-sidebar-container{
     background-color: rgb(145, 63, 221);
     display: grid;
@@ -24,10 +27,6 @@
     height: 2.3rem;
     color: rgb(214, 214, 214);
     border-bottom: 1px solid rgb(214, 214, 214);
-}
-
-#project-container{
-    /* woah nelly*/
 }
 
 .project{
@@ -53,27 +52,58 @@
     height: 1.5rem;
     justify-self: end;
     margin-right: 1rem;
+    align-self: center;
 }
 
 .project-edit-button{
     height: 1.5rem;
     justify-self: end;
     margin-right: 1rem;
+    align-self: center;
 }
 
 .project-view-button{
     font-weight: 800;
     color: white;
-    background-color: blueviolet;
+    background-color: rgb(255, 124, 2);
     border-radius: 4rem;
-    width: 5.4rem;
+    width: 4.5rem;
     text-align: center;
     align-self: center;
 }
 
 .project-view-button:hover{
     background-color: rgb(132, 0, 255);
+    scale: 1.1;
 }
+
+/* Create project */
+#create-project-button{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    background-color: rgb(189, 54, 54);
+    border-radius: 2rem;
+    height: 4rem;
+    justify-items: center;
+}
+
+#create-project-text{
+    font-size: 1.3rem;
+    color: white;
+    align-self: center;
+}
+
+#create-project-image{
+    align-self: center;
+    height: 1.8rem;
+    justify-self: flex-start;
+    color: white;
+}
+
+
+
+
+ /* Task Section */
 
 #task-container{
     background-color: rgb(190, 130, 247);
