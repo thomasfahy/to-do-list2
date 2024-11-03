@@ -1,6 +1,30 @@
-body{
-    background-color: blueviolet;
+*{
+    padding: 0;
+    margin: 0;
 }
-h1{
-    color: white;
+
+#page-container{
+    display: grid;
+    grid-template-columns: minmax(230px, 1fr) 3fr;
+    height: 100vh;
+}
+
+#project-container{
+    background-color: rgb(145, 63, 221);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#project-container-title{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+    height: 2.3rem;
+    color: rgb(214, 214, 214);
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+#task-container{
+    background-color: rgb(190, 130, 247);
 }
