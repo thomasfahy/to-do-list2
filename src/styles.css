@@ -37,12 +37,42 @@
     border-radius: 0.3rem;
     display: grid;
     justify-items: center;
+    grid-template-columns: 5fr 1fr 1fr;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .project-title{
     margin-top: 1rem;
     color: rgb(214, 214, 214);
     font-size: 1.4rem;
+    grid-column: 1/4;
+}
+
+.project-delete-button{
+    height: 1.5rem;
+    justify-self: end;
+    margin-right: 1rem;
+}
+
+.project-edit-button{
+    height: 1.5rem;
+    justify-self: end;
+    margin-right: 1rem;
+}
+
+.project-view-button{
+    font-weight: 800;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 4rem;
+    width: 5.4rem;
+    text-align: center;
+    align-self: center;
+}
+
+.project-view-button:hover{
+    background-color: rgb(132, 0, 255);
 }
 
 #task-container{
