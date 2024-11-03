@@ -9,10 +9,11 @@
     height: 100vh;
 }
 
-#project-container{
+#project-sidebar-container{
     background-color: rgb(145, 63, 221);
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 5rem;
     justify-items: center;
 }
 
@@ -23,6 +24,25 @@
     height: 2.3rem;
     color: rgb(214, 214, 214);
     border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+#project-container{
+    /* woah nelly*/
+}
+
+.project{
+    background-color: brown;
+    width: 13rem;
+    height: 5rem;
+    border-radius: 0.3rem;
+    display: grid;
+    justify-items: center;
+}
+
+.project-title{
+    margin-top: 1rem;
+    color: rgb(214, 214, 214);
+    font-size: 1.4rem;
 }
 
 #task-container{
