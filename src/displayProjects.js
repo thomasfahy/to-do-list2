@@ -17,12 +17,16 @@ export function displayProjects () {
         projectViewButton.className = "project-view-button";
         projectViewButton.textContent = "View";
 
-        const projectEditButton = document.createElement("div");
+        const projectEditButton = document.createElement("img");
         projectEditButton.className = "project-edit-button";
+        projectEditButton.src = "../assets/folder-edit.svg";
+        // NEED TO ADD EVENT LISTENER FOR THIS
 
-        const projectDeleteButton = document.createElement("div");
+        const projectDeleteButton = document.createElement("img");
         projectDeleteButton.className = "project-delete-button";
-       
+        projectDeleteButton.src = "../assets/folder-edit.svg";
+        // NEED TO ADD EVENT LISTENER FOR THIS
+
         projectDiv.appendChild(projectTitle);
         projectDiv.appendChild(projectViewButton);
         projectDiv.appendChild(projectEditButton);       
@@ -33,7 +37,7 @@ export function displayProjects () {
     const newProjectButton = document.createElement("div");
     newProjectButton.id = "create-project-button";
     newProjectButton.addEventListener("click");{
-        
+
     }
 
     const newProjectText = document.createElement("div");
