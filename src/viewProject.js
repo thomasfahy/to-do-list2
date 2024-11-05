@@ -44,9 +44,14 @@ function setCurrentProject (currentProject) {
                 newToDo.appendChild(todoPriority);
                 taskHeader.appendChild(newToDo);
             });
+            let todoDialog = document.getElementById("todoDialog");
+            
             const newTodoButton = document.createElement("div");
             newTodoButton.id = "create-todo-button";
-            newTodoButton.addEventListener("click", createTodo);
+            newTodoButton.addEventListener("click", () => {
+                console.log('add new');
+                todoDialog.showModal();
+              });
 
             const newTodoText = document.createElement("div");
             newTodoText.id = "create-todo-text";

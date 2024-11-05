@@ -15,5 +15,34 @@
             <h1 id="to-do-list-header">To Do List</h1>
         </div>
     </div>
+    <dialog id="todoDialog">
+        <div class="overlay">
+            <form id="todo-form" action="" method="dialog">
+                <h3 id="formTitle">Add New To Do</h3>
+                <label class="formLabel" for="title">Title</label>
+                <input class="formInput" required name="title" id="title" type="text">
+            
+                <label class="formLabel" for="desc">description</label>
+                <input class="formInput" required name="desc" id="description" type="text">
+            
+                <label class="formLabel" for="due-date">Due Date</label>
+                <input class="formInput" required name="due-date" id="due-date" type="date">
+
+                <label for="options">Priority</label>
+                <select id="options" name="options">
+                    <option value="Low">Low</option>
+                    <option value="Normal">Normal</option>
+                    <option value="High">High</option>
+                    <option value="Emergency">Emergency</option>
+                    <option value="On Hold">On Hold</option>
+                </select>
+
+                <div id="formButtonContainer">
+                    <button class="formButton" id="saveButton" name="btn_submit" value="save" id="save" type="submit">Save</button>
+                    <button class="formButton"type="closeButton" name="btn_close" id="close">Close</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
 </body>
 </html>
