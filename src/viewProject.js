@@ -1,5 +1,4 @@
 import { projects, createNewProject } from "./createNewProject";
-import { createTodo } from "./createTodo";
 
 let currentViewedProject = "default";
 

@@ -39,41 +39,39 @@ createNewProject("BABA Booey", [
       }
   ]);
 
-console.log(projects);
+
 displayProjects();
 
 const closeButton = document.getElementById('close');
 closeButton.addEventListener('click', () => {
     todoDialog.close(); //Close Form
-  });
+});
 
-  const form = document.getElementById('todo-form');
-  form.addEventListener('submit', (event) => {
-  event.preventDefault();
+const form = document.getElementById('todo-form');
+form.addEventListener('submit', (event) => {
+event.preventDefault();
 
-  let formData = new FormData(form);
+let formData = new FormData(form);
 
-  const formTitle = formData.get('title');
-  const formDescription = formData.get('desc');
-  const formDueDate = formData.get('due-date');
-  const formPriority = formData.get('options');
+const formTitle = formData.get('title');
+const formDescription = formData.get('desc');
+const formDueDate = formData.get('due-date');
+const formPriority = formData.get('options');
 
-  console.log(formTitle, formDescription, formDueDate, formPriority);
+const newToDo = {
+  title: formTitle,
+  description: formDescription,
+  isComplete: false,
+  dueDate: formDueDate,
+  priority: formPriority
+};
+console.log(projects);
 
-  const newToDo = {
-    title: formTitle,
-    description: formDescription,
-    isComplete: false,
-    dueDate: formDueDate,
-    priority: formPriority
-  };
-  console.log(projects);
-
-  for (let i = 0; i < projects.length; i++) {
-    if (currentViewedProject === projects[i].name) {
-      projects[i].todo.push(newToDo);
-      setCurrentProject(currentViewedProject);
-      break;
-    }
+for (let i = 0; i < projects.length; i++) {
+  if (currentViewedProject === projects[i].name) {
+    projects[i].todo.push(newToDo);
+    setCurrentProject(currentViewedProject);
+    break;
   }
+}
 });

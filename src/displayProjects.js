@@ -1,5 +1,6 @@
 import {projects} from "./createNewProject";
 import { setCurrentProject } from "./viewProject";
+import { createNewProject } from "./createNewProject";
 
 export function displayProjects () {
     let projectContainer = document.getElementById("projects-container");
@@ -37,6 +38,12 @@ export function displayProjects () {
       }
     const newProjectButton = document.createElement("div");
     newProjectButton.id = "create-project-button";
+    newProjectButton.addEventListener("click", () => {
+      createNewProject("Default");
+      let projectsContainer = document.getElementById("projects-container");
+      projectContainer.innerHTML = "";
+      displayProjects();
+    })
 
     const newProjectText = document.createElement("div");
     newProjectText.id = "create-project-text";
