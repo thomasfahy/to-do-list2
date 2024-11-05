@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #page-container{
@@ -106,5 +107,29 @@
  /* Task Section */
 
 #task-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+    padding-top: 1rem;
     background-color: rgb(190, 130, 247);
+    justify-items: center;
+}
+
+.to-do-task{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 2fr;
+    height: 5rem;
+    width: 80%;
+    justify-items: center;
+    background-color: rgb(189, 54, 54);
+    border-left: 6px solid #facc15;
+    border-radius: 2rem;
+
+}
+
+#to-do-list-header{
+    color: white;
+    font-size: 2rem;
+    font-weight: 800;
 }

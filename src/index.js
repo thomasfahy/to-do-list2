@@ -5,13 +5,14 @@ import { displayProjects } from "./displayProjects";
 createNewProject("Project Alpha"); // Adds project with no todos
 createNewProject("Default", [
   { 
+    title: "To-Do-1",
     description: "Define project scope", 
     isComplete: false, 
     dueDate: "2023-11-15" , 
     priority: "Normal"
     }
 ]);
-console.log(projects);
 
+console.log(projects);
 displayProjects();
 

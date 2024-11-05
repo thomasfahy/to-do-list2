@@ -1,8 +1,10 @@
 import {projects} from "./createNewProject";
+import { viewProject, setCurrentProject } from "./viewProject";
 
 export function displayProjects () {
     let projectContainer = document.getElementById("projects-container");
     for (let i = 0; i < projects.length; i++) {
+        let currentProject = projects[i].name;
         console.log(`Loading: ${projects[i].name}`);
         let projectName = projects[i].name;
 
@@ -16,17 +18,16 @@ export function displayProjects () {
         const projectViewButton = document.createElement("div");
         projectViewButton.className = "project-view-button";
         projectViewButton.textContent = "View";
+        projectViewButton.addEventListener("click", () => setCurrentProject(currentProject));
 
         const projectEditButton = document.createElement("img");
         projectEditButton.className = "project-edit-button";
         projectEditButton.src = "../assets/folder-edit.svg";
-        // NEED TO ADD EVENT LISTENER FOR THIS
 
         const projectDeleteButton = document.createElement("img");
         projectDeleteButton.className = "project-delete-button";
-        projectDeleteButton.src = "../assets/folder-edit.svg";
-        // NEED TO ADD EVENT LISTENER FOR THIS
-
+        projectDeleteButton.src = "../assets/delete.svg";
+       
         projectDiv.appendChild(projectTitle);
         projectDiv.appendChild(projectViewButton);
         projectDiv.appendChild(projectEditButton);       
@@ -36,9 +37,6 @@ export function displayProjects () {
       }
     const newProjectButton = document.createElement("div");
     newProjectButton.id = "create-project-button";
-    newProjectButton.addEventListener("click");{
-
-    }
 
     const newProjectText = document.createElement("div");
     newProjectText.id = "create-project-text";
