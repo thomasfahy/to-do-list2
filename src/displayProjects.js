@@ -1,5 +1,5 @@
 import {projects} from "./createNewProject";
-import { viewProject, setCurrentProject } from "./viewProject";
+import { setCurrentProject } from "./viewProject";
 
 export function displayProjects () {
     let projectContainer = document.getElementById("projects-container");

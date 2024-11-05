@@ -2,11 +2,11 @@
 const projects = [];
 
 
-function createNewProject(name, todos = []) {
+function createNewProject(name, todo = []) {
 
   projects.push({
     name: name,
-    todos: todos
+    todo: todo
   });
   console.log(`Project "${name}" added successfully!`);
 }
