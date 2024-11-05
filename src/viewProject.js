@@ -1,15 +1,15 @@
 import { projects, createNewProject } from "./createNewProject";
+import { createTodo } from "./createTodo";
 
 let currentViewedProject = "default";
 
 function setCurrentProject (currentProject) {
     const taskHeader = document.querySelector("#task-container");
-    let toDoListHeader = document.createElement("div");
-    toDoListHeader.textContent = "To Do List";
-    toDoListHeader.id = "to-do-list-header";
     taskHeader.innerHTML = "";
-    taskHeader.appendChild(toDoListHeader);
-
+    let toDoListHeader = document.createElement("div");
+    toDoListHeader.textContent = currentProject;
+    toDoListHeader.id = "to-do-list-header";
+    taskHeader.appendChild(toDoListHeader);   
     for (let i = 0; i < projects.length; i++){
         if (currentProject === projects[i].name){
             console.log("View Success")
@@ -17,6 +17,7 @@ function setCurrentProject (currentProject) {
             const project = projects.find(p => p.name === currentProject);
             console.log(project);
             project.todo.forEach(element => {
+             
                 let newToDo = document.createElement("div");
                 newToDo.className = "to-do-task";
                 
@@ -41,16 +42,26 @@ function setCurrentProject (currentProject) {
                 newToDo.appendChild(todoDescription);
                 newToDo.appendChild(todoDueDate);
                 newToDo.appendChild(todoPriority);
-                
-                
                 taskHeader.appendChild(newToDo);
-
-                console.log(todoTitle, todoDescription, todoDueDate, todoIsComplete);
-
             });
+            const newTodoButton = document.createElement("div");
+            newTodoButton.id = "create-todo-button";
+            newTodoButton.addEventListener("click", createTodo);
 
+            const newTodoText = document.createElement("div");
+            newTodoText.id = "create-todo-text";
+            newTodoText.textContent = "New To Do";
+        
+            const newTodoImage = document.createElement("img");
+            newTodoImage.id = "create-todo-image";
+            newTodoImage.src = "../assets/plus-box.svg";
+            newTodoButton.appendChild(newTodoText);
+            newTodoButton.appendChild(newTodoImage);
+        
+            taskHeader.appendChild(newTodoButton);
         }
     }
+
 }
 
 export { setCurrentProject, currentViewedProject}

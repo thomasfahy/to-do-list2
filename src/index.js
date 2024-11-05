@@ -2,15 +2,28 @@ import "./styles.css";
 import { projects, createNewProject } from "./createNewProject";
 import { displayProjects } from "./displayProjects";
 
-createNewProject("Project Alpha"); // Adds project with no todos
-createNewProject("Default", [
+createNewProject("General", [
   { 
     title: "To-Do-1",
     description: "Define project scope", 
     isComplete: false, 
     dueDate: "2023-11-15" , 
     priority: "Normal"
-    }
+    },
+    { 
+        title: "To-Do-2",
+        description: "Define project scope", 
+        isComplete: false, 
+        dueDate: "2023-11-15" , 
+        priority: "Normal"
+        },
+        { 
+            title: "To-Do-1",
+            description: "Define project scope", 
+            isComplete: false, 
+            dueDate: "2023-11-15" , 
+            priority: "Normal"
+            },
 ]);
 
 createNewProject("BABA Booey", [
@@ -22,7 +35,7 @@ createNewProject("BABA Booey", [
       priority: "Normal"
       }
   ]);
-  
+
 console.log(projects);
 displayProjects();
 
