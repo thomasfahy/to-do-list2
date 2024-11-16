@@ -28,7 +28,6 @@ createNewProject("General", [
             priority: "Normal"
             },
 ]);
-
 createNewProject("BABA Booey", [
     { 
       title: "To-Do-1",
@@ -38,24 +37,21 @@ createNewProject("BABA Booey", [
       priority: "Normal"
       }
   ]);
-console.log(projects);
-console.log(projects[0].name);
 
-displayProjects();
+
+const projectCloseButton = document.getElementById("prj-button-close");
+projectCloseButton.addEventListener('click', () => {
+  projectDialog.close();
+})
 
 let projectForm = projectDialog.querySelector('form');
-    
 projectForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // Correct usage of preventDefault()
-
-  let formData = new FormData(projectForm); // Use the form, not the dialog
-  let newProjectTitle = formData.get('prj-title'); // Get the project title
-
- // Call your function to create the project
+  event.preventDefault();
+  let formData = new FormData(projectForm);
+  let newProjectTitle = formData.get('prj-title'); 
   let projectExists = false;
   projects.forEach(project => {
     if (project.name === newProjectTitle) {
-      console.log(project.name);
       projectExists = true;
     }
   });
@@ -64,35 +60,28 @@ projectForm.addEventListener('submit', (event) => {
     return;
   }
   createNewProject(newProjectTitle);
-  // Clear and re-display projects
   let projectsContainer = document.getElementById("projects-container");
   projectsContainer.innerHTML = ""; 
   displayProjects();
-
-  // Close the dialog after submission
   projectDialog.close();
 });
 
-const todoDialog = document.getElementById('todoDialog');
 
+
+const todoDialog = document.getElementById('todoDialog');
 const closeButton = document.getElementById('close');
-closeButton.addEventListener('click', () => {
-    todoDialog.close(); //Close Form
-});
+closeButton.addEventListener('click', () => {todoDialog.close();});
+
 
 const form = document.getElementById('todo-form');
-
 form.addEventListener('submit', (event) => {
-
 event.preventDefault();
 todoDialog.close();
 let formData = new FormData(form);
-
 const formTitle = formData.get('title');
 const formDescription = formData.get('desc');
 const formDueDate = formData.get('due-date');
 const formPriority = formData.get('options');
-
 const newToDo = {
   title: formTitle,
   description: formDescription,
@@ -101,7 +90,6 @@ const newToDo = {
   priority: formPriority
 };
 console.log(projects);
-
 for (let i = 0; i < projects.length; i++) {
   if (currentViewedProject === projects[i].name) {
     projects[i].todo.push(newToDo);
@@ -110,3 +98,6 @@ for (let i = 0; i < projects.length; i++) {
   }
 }
 });
+
+
+displayProjects();

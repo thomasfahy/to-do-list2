@@ -124,8 +124,8 @@
     height: 5rem;
     width: 85%;
     justify-items: center;
-    background-color: #800020;
-    border-left: 6px solid #facc15;
+    background-color: #ac0505;
+    border-left: 6px solid #ffffff;
     border-radius: 2rem;
     margin: 5px;
 
@@ -135,6 +135,10 @@
     color: white;
     font-size: 2rem;
     font-weight: 800;
+}
+
+.task-title, .task-description, .task-due-date, .task-priority{
+    color: white;
 }
 
 /* form styling */
