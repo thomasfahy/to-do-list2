@@ -38,9 +38,42 @@ createNewProject("BABA Booey", [
       priority: "Normal"
       }
   ]);
-
+console.log(projects);
+console.log(projects[0].name);
 
 displayProjects();
+
+let projectForm = projectDialog.querySelector('form');
+    
+projectForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Correct usage of preventDefault()
+
+  let formData = new FormData(projectForm); // Use the form, not the dialog
+  let newProjectTitle = formData.get('prj-title'); // Get the project title
+
+ // Call your function to create the project
+  let projectExists = false;
+  projects.forEach(project => {
+    if (project.name === newProjectTitle) {
+      console.log(project.name);
+      projectExists = true;
+    }
+  });
+  if (projectExists === true){
+    alert("Project with this name already exists");
+    return;
+  }
+  createNewProject(newProjectTitle);
+  // Clear and re-display projects
+  let projectsContainer = document.getElementById("projects-container");
+  projectsContainer.innerHTML = ""; 
+  displayProjects();
+
+  // Close the dialog after submission
+  projectDialog.close();
+});
+
+const todoDialog = document.getElementById('todoDialog');
 
 const closeButton = document.getElementById('close');
 closeButton.addEventListener('click', () => {
@@ -48,9 +81,11 @@ closeButton.addEventListener('click', () => {
 });
 
 const form = document.getElementById('todo-form');
-form.addEventListener('submit', (event) => {
-event.preventDefault();
 
+form.addEventListener('submit', (event) => {
+
+event.preventDefault();
+todoDialog.close();
 let formData = new FormData(form);
 
 const formTitle = formData.get('title');

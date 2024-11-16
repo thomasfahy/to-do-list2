@@ -39,11 +39,12 @@ export function displayProjects () {
     const newProjectButton = document.createElement("div");
     newProjectButton.id = "create-project-button";
     newProjectButton.addEventListener("click", () => {
-      createNewProject("Default");
-      let projectsContainer = document.getElementById("projects-container");
-      projectContainer.innerHTML = "";
-      displayProjects();
-    })
+      let projectDialog = document.getElementById('projectDialog');
+      projectDialog.showModal();
+    
+      // Find the form inside the dialog
+
+    });
 
     const newProjectText = document.createElement("div");
     newProjectText.id = "create-project-text";

@@ -20,7 +20,7 @@
             <form id="todo-form" action="" method="dialog">
                 <h3 id="formTitle">Add New To Do</h3>
                 <label class="formLabel" for="title">Title</label>
-                <input class="formInput" required name="title" id="title" type="text">
+                <input class="formInput" required name="title" id="todo-title" type="text">
             
                 <label class="formLabel" for="desc">description</label>
                 <input class="formInput" required name="desc" id="description" type="text">
@@ -39,17 +39,17 @@
 
                 <div id="formButtonContainer">
                     <button class="formButton" class="saveButton" name="btn_submit" value="save" id="save" type="submit">Save</button>
-                    <button class="formButton" type="closeButton" name="btn_close" id="close">Close</button>
+                    <button class="formButton" type="button" name="btn_close" id="close">Close</button>
                 </div>
             </form>
         </div>
     </dialog>
     <dialog id="projectDialog">
         <div class="overlay">
-            <form id="todo-form" action="" method="dialog">
+            <form id="project-form" action="" method="dialog">
                 <h3 id="form-project-title"></h3>
-                <label class="formLabel" for="title">New Project Title</label>
-                <input class="formInput" required name="title" id="title" type="text">
+                <label class="formLabel" for="prj-title">New Project Title</label>
+                <input class="formInput" required name="prj-title" id="title" type="text">
 
                 <div id="formButtonContainer">
                     <button class="formButton" class="saveButton" name="btn_submit" value="save" type="submit">Save</button>
