@@ -21,7 +21,7 @@ createNewProject("General", [
         priority: "Normal"
         },
         { 
-            title: "To-Do-1",
+            title: "Baby booey",
             description: "Define project scope", 
             isComplete: false, 
             dueDate: "2023-11-15" , 

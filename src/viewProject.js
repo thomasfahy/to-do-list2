@@ -16,12 +16,11 @@ function setCurrentProject (currentProject) {
             const project = projects.find(p => p.name === currentProject);
             console.log(project);
             project.todo.forEach(element => {
-             
                 let newToDo = document.createElement("div");
                 newToDo.className = "to-do-task";
                 
                 let todoTitle = document.createElement("div");
-                todoTitle.textContent = currentViewedProject;
+                todoTitle.textContent = element.title;
                 todoTitle.className = "task-title"
                 let todoDescription = document.createElement("div");
                 todoDescription.textContent = element.description;
