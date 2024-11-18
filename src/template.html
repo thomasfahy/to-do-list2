@@ -29,7 +29,7 @@
                 <label class="formLabel" for="title">Title</label>
                 <input class="formInput" required name="title" id="todo-title" type="text">
             
-                <label class="formLabel" for="desc">description</label>
+                <label class="formLabel" for="desc">Task Description</label>
                 <input class="formInput" required name="desc" id="description" type="text">
             
                 <label class="formLabel" for="due-date">Due Date</label>
@@ -46,7 +46,7 @@
 
                 <div id="formButtonContainer">
                     <button class="formButton" class="saveButton" name="btn_submit" value="save" id="save" type="submit">Save</button>
-                    <button class="formButton" type="button" name="btn_close" id="close">Close</button>
+                    <button class="formButton" type="button" name="btn_close" id="close">Cancel</button>
                 </div>
             </form>
         </div>
@@ -54,8 +54,7 @@
     <dialog id="projectDialog">
         <div class="overlay">
             <form id="project-form" action="" method="dialog">
-                <h3 id="form-project-title"></h3>
-                <label class="formLabel" for="prj-title">New Project Title</label>
+                <label class="project-form-label" for="prj-title">New Project</label>
                 <input class="formInput" required name="prj-title" id="title" type="text">
 
                 <div id="formProjectButtonContainer">

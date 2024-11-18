@@ -66,6 +66,12 @@
     padding-bottom: 0.5rem;
 }
 
+.project:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
 .project-title{
     margin-top: 1rem;
     color: rgb(214, 214, 214);
@@ -154,8 +160,14 @@
     border-radius: 0.5rem;
     margin: 5px;
     height: 6rem;
-
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+.to-do-task:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
 .task-title{
     grid-column: 1/4;
     font-weight: 800;
@@ -264,3 +276,59 @@ dialog{
 }
 
 /* create-project form styling */
+
+#projectDialog{
+    border: 0px;
+    border-radius: 0.3rem;
+    justify-self: center;
+    margin-top: 33vh;
+
+}
+
+.project-form-label{
+    color: black;
+    justify-self: center;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+#project-form{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+
+
+/* New to-do button styling */
+
+#create-todo-button{
+    border-radius: 1rem;
+    margin-top: 2rem;
+    height: 5rem;
+    width: 15rem;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #F5F6FA;
+    gap: 1rem;
+}
+
+#create-todo-button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#create-todo-image{
+    height: 3rem;
+}
+
+#create-todo-text{
+    font-weight: 800;
+    font-size: 1.3rem;
+    justify-self: end;
+    margin-left: 2rem;
+}
