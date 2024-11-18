@@ -2,8 +2,8 @@
     padding: 0;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    --background-color-1: #2E2E2E; /* var(--background-color-1); */
-    --background-color-2: #3C3C3C; /* var(--background-color-2); */
+    --background-color-1: #565656; /* var(--background-color-1); */
+    --background-color-2: #7F8C8D; /* var(--background-color-2); */
 }
 
 #page-container{
@@ -16,7 +16,7 @@
 #navBar{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    background-color: #ac0505;
+    background-color: #2C3E50;
     grid-column: 1/3;
     height: 6rem;
 }
@@ -24,6 +24,8 @@
 .page-title-container{
     display: grid;
     grid-template-columns: 250px 100px;
+    align-items: center;
+    margin-left: 6.5vw;
 }
 
 #navBar-image{
@@ -53,7 +55,7 @@
 }
 
 .project{
-    background-color: brown;
+    background-color: #2C3E50;
     width: 13rem;
     height: 5rem;
     border-radius: 0.3rem;
@@ -88,7 +90,7 @@
 .project-view-button{
     font-weight: 800;
     color: white;
-    background-color: rgb(255, 124, 2);
+    background-color: #7F8C8D;
     border-radius: 4rem;
     width: 4.5rem;
     text-align: center;
@@ -96,18 +98,24 @@
 }
 
 .project-view-button:hover{
-    background-color: rgb(132, 0, 255);
+    background-color: #bacfd0;
     scale: 1.1;
+    cursor: pointer;
 }
 
 /* Create project */
 #create-project-button{
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    background-color: rgb(189, 54, 54);
+    background-color: #7F8C8D;
     border-radius: 2rem;
     height: 4rem;
     justify-items: center;
+    cursor: pointer;
+}
+
+#create-project-button:hover{
+    background-color: #bacfd0;
 }
 
 #create-project-text{
@@ -141,7 +149,7 @@
     grid-template-rows: 1fr 5fr 1fr;
     width: 85%;
     justify-items: center;
-    background-color: #ac0505;
+    background-color: #F5F6FA;
     border-left: 6px solid #ffffff;
     border-radius: 0.5rem;
     margin: 5px;
@@ -167,33 +175,35 @@
 }
 
 .task-title, .task-description, .task-due-date, .task-priority{
-    color: white;
+    color: black;
 }
 
-/* form styling */
+/* to-do form styling */
+
+#create-todo-button{
+    cursor: pointer;
+}
 
 dialog{
     border: 0px;
-    border-radius: 2rem;
+    border-radius: 0.3rem;
     justify-self: center;
     margin-top: 15vh;
 }
 #todo-form{
-    height: 40rem;
+    height: 33rem;
     width: 25rem;
-    background-color: rgb(145, 63, 221);
+    background-color: #2C3E50;
     display: grid;
     grid-template-columns: 1fr;
     border: none;
-    border: 2px solid #303030;
-    border-radius: 2rem;
 }
 
 #formTitle{
     margin-top: 2rem;
     justify-self: center;
     font-size: 2rem;
-    color: #303030;;
+    color: white;
 }
 .formLabel{
     align-self: center;
@@ -207,9 +217,8 @@ dialog{
     border-radius: 0.5rem;
     font-size: 1rem;
     padding-left: 1rem;
-    border: 1px solid #303030;
-    background-color: rgb(189, 54, 54);
-    color: white;
+    background-color: white;
+    color: black;
     height: 3rem;
 
 }
@@ -230,17 +239,28 @@ dialog{
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-right: 2px;
+    margin-top: 6px;
 }
 
 .formButton{
     width: 6rem;
     height: 2.5rem;
-    border-radius: 2rem;
+    border-radius: 0.2rem;
     background-color: var(--primary-color);
-    border: 1px solid #303030;
-    background-color: #facc15;
+    border: 0px solid #303030;
+    background-color: #7F8C8D;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
 }
 
-.saveButton{
+.formButton:hover{
+    background-color: #bacfd0;
+}
+
+#save.formButton{
     justify-self: end;
 }
+
+/* create-project form styling */
