@@ -7,34 +7,49 @@ import { setCurrentProject } from "./viewProject";
 
 createNewProject("General", [
   { 
-    title: "To-Do-1",
-    description: "Define project scope", 
+    title: "Solve World Hunger",
+    description: "Find a way to feed absolutely everybody all the time", 
     isComplete: false, 
-    dueDate: "2023-11-15" , 
-    priority: "Normal"
+    dueDate: "2023-12-15" , 
+    priority: "Emergency"
     },
     { 
-        title: "To-Do-2",
-        description: "Define project scope", 
+        title: "Get a Job",
+        description: "Going to need alot of money if i am going to solve world hunger", 
         isComplete: false, 
-        dueDate: "2023-11-15" , 
-        priority: "Normal"
+        dueDate: "2023-09-18" , 
+        priority: "High"
         },
         { 
-            title: "Baby booey",
-            description: "Define project scope", 
+            title: "Go to the shops",
+            description: "Feeling like i might make a sandwich today. Ham and cheese i think.", 
             isComplete: false, 
-            dueDate: "2023-11-15" , 
+            dueDate: "2024-12-21" , 
             priority: "Normal"
             },
+            { 
+              title: "Make a sandwich",
+              description: "Ham and cheese. Looking forward to consuming it's going to be great", 
+              isComplete: false, 
+              dueDate: "2023-05-15" , 
+              priority: "Low"
+              },
+              { 
+                title: "Eat a sandwich",
+                description: "If i am going to eat a sandwich i need to make one first. On hold for now", 
+                isComplete: false, 
+                dueDate: "2023-11-17" , 
+                priority: "On Hold"
+                },
+              
 ]);
-createNewProject("BABA Booey", [
+createNewProject("First Project", [
     { 
-      title: "To-Do-1",
-      description: "Define project scope", 
+      title: "Task 1",
+      description: "The first task to complete in a set of to do list tasks", 
       isComplete: false, 
       dueDate: "2023-11-15" , 
-      priority: "Normal"
+      priority: "High"
       }
   ]);
 

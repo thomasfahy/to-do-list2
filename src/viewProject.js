@@ -32,6 +32,21 @@ function setCurrentProject (currentProject) {
 
                 let todoPriority = document.createElement("div");
                 todoPriority.textContent = element.priority;
+                if (element.priority === 'Low'){
+                    newToDo.style.borderLeft = "10px solid green";
+                }
+                if (element.priority === 'Normal'){
+                    newToDo.style.borderLeft = "10px solid yellow";
+                }
+                if (element.priority === 'High'){
+                    newToDo.style.borderLeft = "10px solid orange";
+                }
+                if (element.priority === 'Emergency'){
+                    newToDo.style.borderLeft = "10px solid red";
+                }
+                if (element.priority === 'On Hold'){
+                    newToDo.style.borderLeft = "4px solid blue";
+                }
                 todoPriority.className = "task-priority";
 
                 let todoIsComplete = element.isComplete;

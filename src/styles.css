@@ -52,6 +52,7 @@
     font-size: 2rem;
     height: 2.3rem;
     color: rgb(214, 214, 214);
+    margin-top: 2rem;
 }
 
 .project{
@@ -147,20 +148,21 @@
     padding-top: 1rem;
     background-color: var(--background-color-2);
     justify-items: center;
+    padding-top: 2rem;
 }
 
 .to-do-task{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 2fr 3fr 1fr 1fr;
+    grid-template-rows: 1fr;
     width: 85%;
     justify-items: center;
     background-color: #F5F6FA;
-    border-left: 6px solid #ffffff;
     border-radius: 0.5rem;
     margin: 5px;
     height: 6rem;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }
 .to-do-task:hover{
     transform: translateY(-5px);
@@ -169,11 +171,9 @@
 }
 
 .task-title{
-    grid-column: 1/4;
     font-weight: 800;
 }
 .task-description{
-    grid-column: 1/4;
     justify-self: start;
 }
 
@@ -184,6 +184,8 @@
 #to-do-list-header{
     color: white;
     font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
 }
 
 .task-title, .task-description, .task-due-date, .task-priority{
@@ -252,6 +254,7 @@ dialog{
     gap: 2rem;
     margin-right: 2px;
     margin-top: 6px;
+    margin-bottom: 2rem;
 }
 
 .formButton{
@@ -286,10 +289,10 @@ dialog{
 }
 
 .project-form-label{
-    color: black;
+    color: white;
     justify-self: center;
     font-size: 1.4rem;
-    margin-top: 10px;
+    margin-top: 1.6rem;
     margin-bottom: 10px;
     font-weight: 800;
 }
@@ -298,8 +301,38 @@ dialog{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
+    background-color: #2C3E50;
 }
 
+#formProjectButtonContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.formInput{
+    margin-bottom: 1.4rem;
+}
+
+.formProjectButton{
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 0.2rem;
+    background-color: var(--primary-color);
+    border: 0px solid #303030;
+    background-color: #7F8C8D;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.formProjectButton:hover{
+    background-color: #bacfd0;
+}
 
 
 /* New to-do button styling */
