@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div id="page-container">
+        <div id="navBar">
+            <div class="page-title-container">
+                <div class="navBar-title">Project Manager</div>
+                <img src="240ae4f80351022dfb99.svg" id="navBar-image" alt="">
+            </div>
+            <div class="blankdiv"></div>
+        </div>
+        <div id="project-sidebar-container">
+            <div id="project-container-title">Your Projects</div>
+            <div id="projects-container"></div>
+        </div>
+        <div id="task-container">
+            <h1 id="to-do-list-header">To Do List</h1>
+        </div>
+    </div>
+    <dialog id="todoDialog">
+        <div class="overlay">
+            <form id="todo-form" action="" method="dialog">
+                <h3 id="formTitle">Add New To Do</h3>
+                <label class="formLabel" for="title">Title</label>
+                <input class="formInput" required name="title" id="todo-title" type="text">
+            
+                <label class="formLabel" for="desc">Task Description</label>
+                <input class="formInput" required name="desc" id="description" type="text">
+            
+                <label class="formLabel" for="due-date">Due Date</label>
+                <input class="formInput" required name="due-date" id="due-date" type="date">
+
+                <label class="formLabel" for="options">Priority</label>
+                <select class="formInput" name="options">
+                    <option value="Low">Low</option>
+                    <option value="Normal">Normal</option>
+                    <option value="High">High</option>
+                    <option value="Emergency">Emergency</option>
+                    <option value="On Hold">On Hold</option>
+                </select>
+
+                <div id="formButtonContainer">
+                    <button class="formButton" class="saveButton" name="btn_submit" value="save" id="save" type="submit">Save</button>
+                    <button class="formButton" type="button" name="btn_close" id="close">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+    <dialog id="projectDialog">
+        <div class="overlay">
+            <form id="project-form" action="" method="dialog">
+                <label class="project-form-label" for="prj-title">New Project</label>
+                <input class="formInput" required name="prj-title" id="title" type="text">
+
+                <div id="formProjectButtonContainer">
+                    <button class="formProjectButton" class="saveButton" name="btn_submit" value="save" type="submit">Save</button>
+                    <button class="formProjectButton" type="button" name="btn_close" id="prj-button-close">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+</body>
+</html>
