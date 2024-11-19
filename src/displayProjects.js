@@ -23,11 +23,11 @@ export function displayProjects () {
 
         const projectEditButton = document.createElement("img");
         projectEditButton.className = "project-edit-button";
-        projectEditButton.src = "https://thomasfahy.github.io/to-do-list2/assets/folder-edit.svg";
+        projectEditButton.src = "../assets/folder-edit.svg";
 
         const projectDeleteButton = document.createElement("img");
         projectDeleteButton.className = "project-delete-button";
-        projectDeleteButton.src = "https://thomasfahy.github.io/to-do-list2/assets/delete.svg";
+        projectDeleteButton.src = "../assets/delete.svg";
        
         projectDiv.appendChild(projectTitle);
         projectDiv.appendChild(projectViewButton);
@@ -52,7 +52,7 @@ export function displayProjects () {
 
     const newProjectImage = document.createElement("img");
     newProjectImage.id = "create-project-image";
-    newProjectImage.src = "https://thomasfahy.github.io/to-do-list2/assets/plus-box.svg";
+    newProjectImage.src = "../assets/plus-box.svg";
 
     newProjectButton.appendChild(newProjectText);
     newProjectButton.appendChild(newProjectImage);

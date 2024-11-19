@@ -72,7 +72,7 @@ function setCurrentProject (currentProject) {
         
             const newTodoImage = document.createElement("img");
             newTodoImage.id = "create-todo-image";
-            newTodoImage.src = "/to-do-list2/assets/plus-box.svg";
+            newTodoImage.src = "../assets/plus-box.svg";
             newTodoButton.appendChild(newTodoText);
             newTodoButton.appendChild(newTodoImage);
         
